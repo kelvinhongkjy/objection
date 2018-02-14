@@ -126,6 +126,17 @@
 		E6EBDE872033D1BC00421DF8 /* JSObjectionProviderEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B81F8CE135D06A300221A88 /* JSObjectionProviderEntry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6EBDE882033D1BC00421DF8 /* JSObjectionRuntimePropertyReflector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B53383117AC1420004BDF83 /* JSObjectionRuntimePropertyReflector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6EBDE892033D1BC00421DF8 /* JSObjection.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B9D310113DF613500C81C45 /* JSObjection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6EBDEC12033EB5C00421DF8 /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B81F8DC135D06C200221A88 /* JSObjectionProviderEntry.m */; };
+		E6EBDEC22033EB5C00421DF8 /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B21A71342B79E00833077 /* JSObjectionEntry.m */; };
+		E6EBDEC32033EB5C00421DF8 /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B53471812F316A4000480AB /* NSObject+Objection.m */; };
+		E6EBDEC42033EB5C00421DF8 /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B496E6A12B0F3E50053F2A3 /* JSObjectionUtils.m */; };
+		E6EBDEC52033EB5C00421DF8 /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED511E12AA8BCC00CA6B36 /* JSObjectionInjectorEntry.m */; };
+		E6EBDEC62033EB5C00421DF8 /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED511F12AA8BCC00CA6B36 /* JSObjectionInjector.m */; };
+		E6EBDEC72033EB5C00421DF8 /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED512012AA8BCC00CA6B36 /* JSObjectionBindingEntry.m */; };
+		E6EBDEC82033EB5C00421DF8 /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B957EC512ADE03900CBF1EB /* JSObjectionModule.m */; };
+		E6EBDEC92033EB5C00421DF8 /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D310213DF613500C81C45 /* JSObjection.m */; };
+		E6EBDECA2033EB5C00421DF8 /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7875F145647EF00BD705E /* JSObjectFactory.m */; };
+		E6EBDECB2033EB5C00421DF8 /* JSObjectionRuntimePropertyReflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B53383217AC1420004BDF83 /* JSObjectionRuntimePropertyReflector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,13 +238,6 @@
 			remoteGlobalIDString = 1F1A74281940169200FFFC47;
 			remoteInfo = "Nimble-iOS";
 		};
-		E6EBDE7C2033D1A700421DF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = "Objection-StaticLib";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -315,7 +319,7 @@
 		D2AAC07E0554694100DB5192 /* CircularDependencySpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularDependencySpecs.m; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB5195 /* CircularDependencyFixtures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularDependencyFixtures.m; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB5198 /* CircularDependencyFixtures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularDependencyFixtures.h; sourceTree = "<group>"; };
-		E6EBDE742033D14600421DF8 /* Objection_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Objection_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6EBDE742033D14600421DF8 /* Objection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Objection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,7 +376,7 @@
 				4BED511612AA8B7A00CA6B36 /* Objection.framework */,
 				4B42580813F56CC0006BC001 /* Specs-iOS.xctest */,
 				4B42587513F56EA3006BC001 /* Specs-OSX.xctest */,
-				E6EBDE742033D14600421DF8 /* Objection_iOS.framework */,
+				E6EBDE742033D14600421DF8 /* Objection.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -596,10 +600,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6EBDE812033D1BC00421DF8 /* Objection.h in Headers */,
 				E6EBDE7E2033D1BC00421DF8 /* JSObjectFactory.h in Headers */,
 				E6EBDE7F2033D1BC00421DF8 /* JSObjectionUtils.h in Headers */,
 				E6EBDE802033D1BC00421DF8 /* JSObjectionEntry.h in Headers */,
-				E6EBDE812033D1BC00421DF8 /* Objection.h in Headers */,
 				E6EBDE822033D1BC00421DF8 /* JSObjectionInjectorEntry.h in Headers */,
 				E6EBDE832033D1BC00421DF8 /* JSObjectionInjector.h in Headers */,
 				E6EBDE842033D1BC00421DF8 /* JSObjectionBindingEntry.h in Headers */,
@@ -700,11 +704,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				E6EBDE7D2033D1A700421DF8 /* PBXTargetDependency */,
 			);
 			name = "Objection-iOS";
 			productName = "Objection-iOS";
-			productReference = E6EBDE742033D14600421DF8 /* Objection_iOS.framework */;
+			productReference = E6EBDE742033D14600421DF8 /* Objection.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -748,10 +751,10 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* Objection-StaticLib */,
+				E6EBDE732033D14600421DF8 /* Objection-iOS */,
 				4BED511512AA8B7A00CA6B36 /* Objection */,
 				4B42580713F56CC0006BC001 /* Specs-iOS */,
 				4B42587413F56EA3006BC001 /* Specs-OSX */,
-				E6EBDE732033D14600421DF8 /* Objection-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -967,6 +970,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6EBDEC12033EB5C00421DF8 /* JSObjectionProviderEntry.m in Sources */,
+				E6EBDEC22033EB5C00421DF8 /* JSObjectionEntry.m in Sources */,
+				E6EBDEC32033EB5C00421DF8 /* NSObject+Objection.m in Sources */,
+				E6EBDEC42033EB5C00421DF8 /* JSObjectionUtils.m in Sources */,
+				E6EBDEC52033EB5C00421DF8 /* JSObjectionInjectorEntry.m in Sources */,
+				E6EBDEC62033EB5C00421DF8 /* JSObjectionInjector.m in Sources */,
+				E6EBDEC72033EB5C00421DF8 /* JSObjectionBindingEntry.m in Sources */,
+				E6EBDEC82033EB5C00421DF8 /* JSObjectionModule.m in Sources */,
+				E6EBDEC92033EB5C00421DF8 /* JSObjection.m in Sources */,
+				E6EBDECA2033EB5C00421DF8 /* JSObjectFactory.m in Sources */,
+				E6EBDECB2033EB5C00421DF8 /* JSObjectionRuntimePropertyReflector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,11 +1006,6 @@
 			isa = PBXTargetDependency;
 			name = "Nimble-iOS";
 			targetProxy = 4B833AA91AC1D68900C84F00 /* PBXContainerItemProxy */;
-		};
-		E6EBDE7D2033D1A700421DF8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2AAC07D0554694100DB518D /* Objection-StaticLib */;
-			targetProxy = E6EBDE7C2033D1A700421DF8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1372,13 +1381,15 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Objection-iOS/Info.plist";
+				INFOPLIST_FILE = "Objection-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.KH.Objection-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KH.Objection;
+				PRODUCT_MODULE_NAME = Objection;
+				PRODUCT_NAME = Objection;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1425,13 +1436,15 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Objection-iOS/Info.plist";
+				INFOPLIST_FILE = "Objection-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.KH.Objection-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KH.Objection;
+				PRODUCT_MODULE_NAME = Objection;
+				PRODUCT_NAME = Objection;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
